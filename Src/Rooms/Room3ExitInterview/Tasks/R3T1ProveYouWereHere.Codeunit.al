@@ -1,0 +1,51 @@
+codeunit 74309 "R3T1 Prove You Were Here ED" implements iEscapeRoomTask
+{
+    var
+        Room: Codeunit "Room3 Exit Interview ED";
+
+    procedure GetTaskRec() EscapeRoomTask: Record "Escape Room Task"
+    var
+        Me: ModuleInfo;
+    begin
+        NavApp.GetCurrentModuleInfo(Me);
+        EscapeRoomTask."Venue Id" := Me.Name;
+        EscapeRoomTask."Room Name" := Format(Room.GetRoom());
+        EscapeRoomTask.Name := Format(this.GetTask());
+        EscapeRoomTask.Description := 'The organizers verify all your conference activities.';
+    end;
+
+    procedure GetTask(): Enum "Escape Room Task"
+    begin
+        exit(Enum::"Escape Room Task"::ProveYouWereHereED);
+    end;
+
+    procedure IsValid(): Boolean
+    var
+        TestQueue: Record "Test Queue";
+        TaskValidationTestRunner: Codeunit "Task Validation Test Runner";
+        TestCodeunitId: Integer;
+    begin
+        TestCodeunitId := Codeunit::"Exit Interview Test ED";
+
+        if TestQueue.Get(TestCodeunitId) then
+            TestQueue.Delete();
+
+        TestQueue.Init();
+        TestQueue."Codeunit Id" := TestCodeunitId;
+        TestQueue.Success := false;
+        TestQueue.Insert();
+
+        Commit();
+        TaskValidationTestRunner.Run(TestQueue);
+
+        SelectLatestVersion();
+        TestQueue.Get(TestCodeunitId);
+
+        exit(TestQueue.Success);
+    end;
+
+    procedure GetHint(): Text
+    begin
+        exit('Just click Update Status. The exit interview checks everything automatically.');
+    end;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution: Room 1 - Find Your Badge</title>
+</head>
+
+<body>
+    <h1>Solution: Room 1 - Find Your Badge</h1>
+
+    <p>The company name is stored on the Company Information page. You need to change it to match
+        the conference records.</p>
+
+    <h2>Fix Your Badge</h2>
+
+    <h3>Step 1: Open Company Information</h3>
+    <ol>
+        <li>In Business Central, use the search bar (magnifying glass or Alt+Q)</li>
+        <li>Search for <strong>Company Information</strong></li>
+        <li>Open the <strong>Company Information</strong> page</li>
+    </ol>
+
+    <h3>Step 2: Update the Company Name</h3>
+    <ol>
+        <li>Find the <strong>Name</strong> field at the top of the page</li>
+        <li>Change it to <strong>Directions 2026</strong> (exact spelling matters)</li>
+        <li>Close the page (the change saves automatically)</li>
+    </ol>
+
+    <h4>Why This Matters:</h4>
+    <ul>
+        <li>The task uses <strong>polling validation</strong> — the framework calls <code>IsValid()</code>
+            when you click Update Status</li>
+        <li><code>IsValid()</code> reads the Company Information record and checks the Name field</li>
+        <li>No event subscriber is needed because we're checking an existing record's field value</li>
+    </ul>
+
+    <h2>Verification</h2>
+    <ul>
+        <li>Company Information page shows Name = <strong>Directions 2026</strong></li>
+        <li>Task status shows <strong>Completed</strong> after clicking Update Status</li>
+        <li>Room 1 closes and Room 2 opens automatically</li>
+    </ul>
+    <p><strong>Important:</strong> Don't forget to click the <strong>Update Status</strong> button.</p>
+
+    <h2>What You've Accomplished</h2>
+    <ul>
+        <li>Found and modified company-level data in Business Central</li>
+        <li>Experienced the <strong>polling</strong> validation pattern — the simplest form of task validation</li>
+    </ul>
+</body>
+
+</html>

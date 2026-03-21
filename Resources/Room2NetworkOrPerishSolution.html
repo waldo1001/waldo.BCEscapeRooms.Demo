@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution: Room 2 - Network or Perish</title>
+</head>
+
+<body>
+    <h1>Solution: Room 2 - Network or Perish</h1>
+
+    <p>You need to create a Contact record with Company Name set to "Directions Partner".</p>
+
+    <h2>Make a Connection</h2>
+
+    <h3>Step 1: Open the Contact List</h3>
+    <ol>
+        <li>In Business Central, search for <strong>Contacts</strong></li>
+        <li>Open the <strong>Contacts</strong> list page</li>
+    </ol>
+
+    <h3>Step 2: Create a New Contact</h3>
+    <ol>
+        <li>Click <strong>New</strong> to create a new contact</li>
+        <li>Set the <strong>Company Name</strong> field to <strong>Directions Partner</strong>
+            (exact spelling matters)</li>
+        <li>Fill in any other required fields as needed</li>
+        <li>Close the contact card</li>
+    </ol>
+
+    <h4>Why This Matters:</h4>
+    <ul>
+        <li>This task uses the <strong>event subscriber</strong> validation pattern</li>
+        <li>The task codeunit subscribes to <code>OnAfterInsertEvent</code> and
+            <code>OnAfterModifyEvent</code> on the Contact table</li>
+        <li>The moment a Contact with Company Name "Directions Partner" is inserted or modified,
+            the subscriber calls <code>SetStatusCompleted()</code></li>
+        <li>The <strong>room status guard</strong> (<code>GetStatus() &lt;&gt; InProgress</code>)
+            prevents the subscriber from firing outside this room</li>
+        <li><strong>SingleInstance = true</strong> on the codeunit ensures the subscriber shares
+            state with the task instance</li>
+    </ul>
+
+    <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+        <p><strong>Why both Insert and Modify?</strong> The participant might create the contact
+            first (Insert) and then set the company name afterward (Modify). Subscribing to both
+            events ensures the task completes regardless of the order.</p>
+    </div>
+
+    <h2>Verification</h2>
+    <ul>
+        <li>A Contact with Company Name <strong>Directions Partner</strong> exists</li>
+        <li>Task completed <strong>automatically</strong> (no Update Status click needed)</li>
+        <li>Room 2 closes and Room 3 opens automatically</li>
+    </ul>
+
+    <h2>What You've Accomplished</h2>
+    <ul>
+        <li>Created contact data in Business Central</li>
+        <li>Experienced the <strong>event subscriber</strong> validation pattern — the task completed
+            instantly without clicking Update Status</li>
+        <li>Understood why <strong>SingleInstance</strong> and <strong>room status guards</strong>
+            are essential for event-based validation</li>
+    </ul>
+</body>
+
+</html>

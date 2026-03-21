@@ -1,0 +1,41 @@
+{
+  "id": "082c9ce8-1395-458d-ad8f-e52f0129710e",
+  "name": "EscapeDirections",
+  "publisher": "waldo",
+  "version": "1.0.0.0",
+  "brief": "Escape Directions — a conference-themed escape room venue for the Directions partner conference.",
+  "description": "Three rooms that take you through the Directions conference experience: find your badge, network with partners, and pass the exit interview.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "contextSensitiveHelpUrl": "https://www.directionsforpartners.com/",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "f03c0f0c-d887-4279-b226-dea59737ecf8",
+      "name": "BCTalent.EscapeRoom",
+      "publisher": "waldo & AJ",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "27.0.0.0",
+  "application": "27.0.0.0",
+  "idRanges": [
+    {
+      "from": 74300,
+      "to": 74399
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "15.0",
+  "resourceFolders": [
+    "Resources"
+  ],
+  "target": "Cloud"
+}

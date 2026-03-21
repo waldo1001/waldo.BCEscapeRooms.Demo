@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution: Room 3 - Exit Interview</title>
+</head>
+
+<body>
+    <h1>Solution: Room 3 - Exit Interview</h1>
+
+    <p>The exit interview is an automated test that verifies the results of Room 1 and Room 2.
+        There is nothing new to configure — just ensure the previous rooms were completed correctly.</p>
+
+    <h2>Pass the Exit Check</h2>
+
+    <h3>What the Test Checks</h3>
+    <p>The automated verification runs two assertions:</p>
+    <ol>
+        <li><strong>Company Information</strong> — Name must be <strong>Directions 2026</strong>
+            (from Room 1)</li>
+        <li><strong>Contact</strong> — A Contact with Company Name <strong>Directions Partner</strong>
+            must exist (from Room 2)</li>
+    </ol>
+
+    <h3>If the Test Fails</h3>
+    <p>The error message tells you exactly what is missing. Go back and fix it:</p>
+    <ul>
+        <li>If the company name is wrong: open <strong>Company Information</strong> and correct it</li>
+        <li>If the contact is missing: open <strong>Contacts</strong> and create one with
+            Company Name <strong>Directions Partner</strong></li>
+    </ul>
+
+    <h4>Why This Matters:</h4>
+    <ul>
+        <li>This task uses the <strong>test codeunit</strong> validation pattern</li>
+        <li>A codeunit with <code>Subtype = Test</code> runs when Update Status is clicked</li>
+        <li>The test performs multi-step validation across multiple tables — something that
+            simple polling or event subscribers cannot do as cleanly</li>
+        <li>The framework's <strong>Task Validation Test Runner</strong> handles execution:
+            it catches errors and translates them into pass/fail results</li>
+        <li><code>SelectLatestVersion()</code> ensures the task reads the test result from the
+            database, not from NST cache</li>
+    </ul>
+
+    <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+        <p><strong>The test codeunit pattern is the most powerful validation option.</strong>
+            It can test anything a normal AL test can test — table data, page availability,
+            complex business logic, even UI interactions via page test actions.</p>
+    </div>
+
+    <h2>Verification</h2>
+    <ul>
+        <li>Click <strong>Update Status</strong> — the test runs automatically</li>
+        <li>Task shows <strong>Completed</strong></li>
+        <li>Room 3 closes, and the venue is completed</li>
+        <li>The venue's Stop DateTime is set and telemetry is logged</li>
+    </ul>
+
+    <h2>What You've Accomplished</h2>
+    <ul>
+        <li>Experienced all <strong>three validation patterns</strong> in one venue:
+            <strong>polling</strong> (Room 1), <strong>event subscriber</strong> (Room 2),
+            and <strong>test codeunit</strong> (Room 3)</li>
+        <li>Saw the <strong>completion cascade</strong> in action — task complete triggers
+            room close triggers next room open (or venue close)</li>
+        <li>Escaped the Directions conference</li>
+    </ul>
+</body>
+
+</html>
