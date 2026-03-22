@@ -29,11 +29,31 @@ codeunit 74303 "EscapeDirections Venue" implements iEscapeRoomVenue
 
     procedure GetRoomCompletedImage() InStr: InStream
     begin
-        NavApp.GetResource('RoomCompleted.png', InStr);
+        NavApp.GetResource('RoomCompleted_75.jpeg', InStr);
     end;
 
     procedure GetVenueCompletedImage() InStr: InStream
     begin
-        NavApp.GetResource('VenueCompleted.png', InStr);
+        NavApp.GetResource('VenueCompleted_75.jpeg', InStr);
+    end;
+
+    // Reset the data when user clicks on the "Reset Venue" action on the Escape Room Venue Card page. This is to allow users to replay the rooms and venue.
+    [EventSubscriber(ObjectType::page, page::"Escape Room Venue Card", OnAfterActionEvent, ResetVenue, false, false)]
+    local procedure EscapeRoomVenueCardAction(var Rec: Record "Escape Room Venue")
+    var
+        CompanyInformation: Record "Company Information";
+        Contact: Record Contact;
+        Customer: Record Customer;
+    begin
+        if CompanyInformation.Get() then begin
+            CompanyInformation.Name := 'CRONUS International Ltd.';
+            CompanyInformation.Modify();
+        end;
+
+        Contact.SetRange("Company Name", 'waldo.be');
+        Contact.DeleteAll(true);
+
+        Customer.SetRange(Name, 'waldo.be');
+        Customer.DeleteAll(true);
     end;
 }

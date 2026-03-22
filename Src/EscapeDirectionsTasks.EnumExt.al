@@ -15,4 +15,9 @@ enumextension 74302 "EscapeDirections Tasks" extends "Escape Room Task"
         Caption = 'Prove You Were Here';
         Implementation = iEscapeRoomTask = "R3T1 Prove You Were Here ED";
     }
+    value(74303; SignUpForNextYearED)
+    {
+        Caption = 'Sign Up for Next Year';
+        Implementation = iEscapeRoomTask = "R3T2 Sign Up For Next Year ED";
+    }
 }

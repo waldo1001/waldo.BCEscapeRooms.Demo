@@ -23,6 +23,7 @@ codeunit 74306 "Room3 Exit Interview ED" implements iEscapeRoom
 
     procedure GetTasks() Tasks: List of [Interface iEscapeRoomTask]
     begin
+        Tasks.Add(Enum::"Escape Room Task"::SignUpForNextYearED);
         Tasks.Add(Enum::"Escape Room Task"::ProveYouWereHereED);
     end;
 

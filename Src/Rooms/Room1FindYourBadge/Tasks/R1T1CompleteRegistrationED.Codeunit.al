@@ -26,7 +26,7 @@ codeunit 74307 "R1T1 Complete Registration ED" implements iEscapeRoomTask
     begin
         if not CompanyInformation.Get() then
             exit(false);
-        exit(CompanyInformation.Name = 'Directions 2026');
+        exit(CompanyInformation.Name = 'iFacto');
     end;
 
     procedure GetHint(): Text

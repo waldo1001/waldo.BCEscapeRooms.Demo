@@ -46,9 +46,9 @@ codeunit 74308 "R2T1 Make A Connection ED" implements iEscapeRoomTask
 
     local procedure ValidateContact(var Rec: Record Contact)
     begin
-        if Room.GetRoomRec().GetStatus() <> Enum::"Escape Room Status"::InProgress then 
+        if Room.GetRoomRec().GetStatus() <> Enum::"Escape Room Status"::InProgress then
             exit;
-        if Rec."Company Name" <> 'Directions Partner' then exit;
+        if Rec."Company Name" <> 'waldo.be' then exit;
 
         this.GetTaskRec().SetStatusCompleted();
     end;

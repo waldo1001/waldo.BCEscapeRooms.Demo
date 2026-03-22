@@ -11,12 +11,12 @@ codeunit 74310 "Exit Interview Test ED"
     begin
         // Verify Room 1: Badge was completed
         CompanyInformation.Get();
-        if CompanyInformation.Name <> 'Directions 2026' then
-            Error('Your badge still shows the wrong company name. Go back to Company Information and set the Name to "Directions 2026".');
+        if CompanyInformation.Name <> 'iFacto' then
+            Error('Your badge still shows the wrong company name. Go back to Company Information and set the Name to "iFacto".');
 
         // Verify Room 2: A connection was made
-        Contact.SetRange("Company Name", 'Directions Partner');
+        Contact.SetRange("Company Name", 'waldo.be');
         if Contact.IsEmpty() then
-            Error('No networking contact found. Create a Contact with Company Name "Directions Partner".');
+            Error('No networking contact found. Create a Contact with Company Name "waldo.be".');
     end;
 }
