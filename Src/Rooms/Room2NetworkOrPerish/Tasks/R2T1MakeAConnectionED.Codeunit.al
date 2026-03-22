@@ -35,23 +35,20 @@ codeunit 74308 "R2T1 Make A Connection ED" implements iEscapeRoomTask
     [EventSubscriber(ObjectType::Table, Database::Contact, OnAfterInsertEvent, '', false, false)]
     local procedure ContactOnAfterInsert(var Rec: Record Contact)
     begin
-        if Room.GetRoomRec().GetStatus() <> Enum::"Escape Room Status"::InProgress then
-            exit;
-
-        if Rec."Company Name" <> 'Directions Partner' then
-            exit;
-
-        this.GetTaskRec().SetStatusCompleted();
+        ValidateContact(Rec);
     end;
 
     [EventSubscriber(ObjectType::Table, Database::Contact, OnAfterModifyEvent, '', false, false)]
     local procedure ContactOnAfterModify(var Rec: Record Contact)
     begin
-        if Room.GetRoomRec().GetStatus() <> Enum::"Escape Room Status"::InProgress then
-            exit;
+        ValidateContact(Rec);
+    end;
 
-        if Rec."Company Name" <> 'Directions Partner' then
+    local procedure ValidateContact(var Rec: Record Contact)
+    begin
+        if Room.GetRoomRec().GetStatus() <> Enum::"Escape Room Status"::InProgress then 
             exit;
+        if Rec."Company Name" <> 'Directions Partner' then exit;
 
         this.GetTaskRec().SetStatusCompleted();
     end;

@@ -28,17 +28,21 @@ codeunit 74309 "R3T1 Prove You Were Here ED" implements iEscapeRoomTask
     begin
         TestCodeunitId := Codeunit::"Exit Interview Test ED";
 
+        // Clean up any existing test queue record
         if TestQueue.Get(TestCodeunitId) then
             TestQueue.Delete();
 
+        // Set up the test queue
         TestQueue.Init();
         TestQueue."Codeunit Id" := TestCodeunitId;
         TestQueue.Success := false;
         TestQueue.Insert();
 
+        // Run the test
         Commit();
         TaskValidationTestRunner.Run(TestQueue);
 
+        // Get the result - must reload the record after test run
         SelectLatestVersion();
         TestQueue.Get(TestCodeunitId);
 
