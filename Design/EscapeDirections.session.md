@@ -1146,16 +1146,19 @@ flowchart LR
 
 ---
 
-### Part D — Final Takeaway (~1 min)
+### Part D — Key Takeaways (~1 min)
 
-**Slide: The Compound Value**
+#### Slide — Key Takeaways
 
-- Escape rooms are a **forcing function for good design** — you cannot build task validation without being exact about what "done" means
-- The `Implementation` keyword is a **teaching example in itself** — show your team how AL interfaces replace factory patterns
-- AI-assisted design works **because the spec is complete** — garbage spec in, garbage code out
-- The whole stack is open source — clone the framework, fork a venue, publish to your BC environment
+**Heading:** Why It's Worth Your Time
 
-**Say:** *"If you leave with one thing today: write the spec first. Framework, design doc, copilot instructions — they're all about being precise before you write code. That discipline pays off whether you have an AI agent or not."*
+- **Learning sticks when it's a game.** Participants remember what they figured out themselves far longer than what they were told. An escape room creates the tension, the "aha", and the story to tell colleagues on Monday.
+- **It forces you to define "done".** Building task validation is a discipline: you cannot be vague. That clarity — knowing exactly what correct looks like — improves everything you build, escape room or not.
+- **Training that feels like play scales better.** A well-designed venue runs the same for 5 people or 500. Participants self-pace. Facilitators aren't bottlenecks. The framework tracks progress for you.
+- **The investment is small; the reuse is large.** A venue you build once runs at every onboarding, every partner day, every team training session. The second time costs almost nothing.
+- **It's open source and open-ended.** Developer tracks, consultant tracks, customer onboarding, certification prep — same framework, different content. Whatever your audience needs to *do*, you can validate it.
+
+**Say:** *"The technology is the easy part. The hard part is deciding what matters enough to turn into a challenge. That thinking is worthwhile on its own — and then you get a game out of it."*
 
 ---
 
