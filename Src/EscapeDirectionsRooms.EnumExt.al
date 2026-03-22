@@ -3,7 +3,7 @@ enumextension 74301 "EscapeDirections Rooms" extends "Escape Room"
     value(74300; FindYourBadgeED)
     {
         Caption = 'Find Your Badge';
-        Implementation = iEscapeRoom = "Room1 Find Your Badge ED";
+        Implementation = iEscapeRoom = "Room1 Find Your Badge ED"; //Suffix, to avoid collisions with other venues
     }
     value(74301; NetworkOrPerishED)
     {

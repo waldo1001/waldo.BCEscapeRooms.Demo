@@ -9,6 +9,7 @@ codeunit 74308 "R2T1 Make A Connection ED" implements iEscapeRoomTask
     var
         Me: ModuleInfo;
     begin
+        //To limit the data we need to hardcode some of the values here
         NavApp.GetCurrentModuleInfo(Me);
         EscapeRoomTask."Venue Id" := Me.Name;
         EscapeRoomTask."Room Name" := Format(Room.GetRoom());

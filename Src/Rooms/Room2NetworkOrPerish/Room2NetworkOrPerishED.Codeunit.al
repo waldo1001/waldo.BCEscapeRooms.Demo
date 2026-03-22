@@ -1,35 +1,36 @@
-codeunit 74306 "Room3 Exit Interview ED" implements iEscapeRoom
+codeunit 74305 "Room2 Network Or Perish ED" implements iEscapeRoom
 {
     procedure GetRoomRec() EscapeRoom: Record "Escape Room"
     var
         Me: ModuleInfo;
     begin
+        //To limit the data we need to hardcode some of the values here
         NavApp.GetCurrentModuleInfo(Me);
         EscapeRoom."Venue Id" := Me.Name;
         EscapeRoom.Name := Format(this.GetRoom());
-        EscapeRoom.Description := 'The organizers verify your conference attendance.';
+        EscapeRoom.Description := 'Network with a fellow partner by creating a new contact.';
     end;
 
     procedure GetRoom(): Enum "Escape Room"
     begin
-        exit(Enum::"Escape Room"::ExitInterviewED);
+        exit(Enum::"Escape Room"::NetworkOrPerishED);
     end;
 
     procedure GetRoomDescription() RoomDescription: Text
     begin
-        RoomDescription := NavApp.GetResourceAsText('Room3ExitInterviewDescription.html');
+        RoomDescription := NavApp.GetResourceAsText('Room2NetworkOrPerishDescription.html');
     end;
 
     procedure GetTasks() Tasks: List of [Interface iEscapeRoomTask]
     begin
-        Tasks.Add(Enum::"Escape Room Task"::ProveYouWereHereED);
+        Tasks.Add(Enum::"Escape Room Task"::MakeAConnectionED);
     end;
 
     procedure Solve()
     var
         RichTextBoxPage: Page "Rich Text Box Page";
     begin
-        RichTextBoxPage.Initialize('Solution', NavApp.GetResourceAsText('Room3ExitInterviewSolution.html'));
+        RichTextBoxPage.Initialize('Solution', NavApp.GetResourceAsText('Room2NetworkOrPerishSolution.html'));
         RichTextBoxPage.RunModal();
     end;
 }

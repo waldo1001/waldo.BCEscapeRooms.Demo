@@ -7,6 +7,7 @@ codeunit 74307 "R1T1 Complete Registration ED" implements iEscapeRoomTask
     var
         Me: ModuleInfo;
     begin
+        //To limit the data we need to hardcode some of the values here
         NavApp.GetCurrentModuleInfo(Me);
         EscapeRoomTask."Venue Id" := Me.Name;
         EscapeRoomTask."Room Name" := Format(Room.GetRoom());

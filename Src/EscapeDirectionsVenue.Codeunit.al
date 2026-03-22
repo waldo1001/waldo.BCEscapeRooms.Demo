@@ -4,6 +4,7 @@ codeunit 74303 "EscapeDirections Venue" implements iEscapeRoomVenue
     var
         Me: ModuleInfo;
     begin
+        //To limit the data we need to hardcode some of the values here
         NavApp.GetCurrentModuleInfo(Me);
         EscapeRoomVenue.Id := Me.Name;
         EscapeRoomVenue.Name := Me.Name;
@@ -20,6 +21,7 @@ codeunit 74303 "EscapeDirections Venue" implements iEscapeRoomVenue
 
     procedure GetRooms() Rooms: List of [Interface iEscapeRoom]
     begin
+        //Order of the rooms is decided here
         Rooms.Add(Enum::"Escape Room"::FindYourBadgeED);
         Rooms.Add(Enum::"Escape Room"::NetworkOrPerishED);
         Rooms.Add(Enum::"Escape Room"::ExitInterviewED);
