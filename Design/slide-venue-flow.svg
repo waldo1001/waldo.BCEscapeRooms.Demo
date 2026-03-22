@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="175" viewBox="0 0 900 175" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="175" fill="white" rx="12" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- ========== VENUE ========== -->
+  <rect x="12" y="28" width="148" height="103" rx="10" fill="#1e3a5f"/>
+  <text x="86" y="63" text-anchor="middle" fill="#93c5fd" font-size="9.5" font-weight="bold" letter-spacing="2">VENUE</text>
+  <line x1="28" y1="69" x2="144" y2="69" stroke="#3b5f8a" stroke-width="1"/>
+  <text x="86" y="91" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Escape</text>
+  <text x="86" y="109" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Directions</text>
+
+  <!-- Arrow 1 -->
+  <line x1="161" y1="79" x2="202" y2="79" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ========== ROOM 1 — OPEN ========== -->
+  <rect x="206" y="28" width="165" height="103" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <!-- Open padlock: body -->
+  <rect x="349" y="37" width="16" height="11" rx="2.5" fill="#16a34a"/>
+  <!-- Open padlock: keyhole -->
+  <circle cx="357" cy="43" r="2" fill="#f0fdf4"/>
+  <!-- Open padlock: shackle (left leg attached, right end free — open) -->
+  <path d="M 351,37 L 351,30 A 6,7 0 0 1 363,30" stroke="#16a34a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Room 1 labels -->
+  <text x="288" y="63" text-anchor="middle" fill="#15803d" font-size="9.5" font-weight="bold" letter-spacing="2">ROOM 1</text>
+  <line x1="222" y1="69" x2="354" y2="69" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="288" y="91" text-anchor="middle" fill="#166534" font-size="13" font-weight="bold">Find Your</text>
+  <text x="288" y="109" text-anchor="middle" fill="#166534" font-size="13" font-weight="bold">Badge</text>
+  <!-- OPEN pill -->
+  <rect x="264" y="117" width="48" height="11" rx="5.5" fill="#16a34a"/>
+  <text x="288" y="126" text-anchor="middle" fill="white" font-size="8.5" font-weight="bold">OPEN</text>
+  <!-- Validation pattern label -->
+  <text x="288" y="152" text-anchor="middle" fill="#16a34a" font-size="10" font-style="italic">Polling</text>
+
+  <!-- Arrow 2 -->
+  <line x1="372" y1="79" x2="413" y2="79" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ========== ROOM 2 — LOCKED ========== -->
+  <rect x="417" y="28" width="165" height="103" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="7,4"/>
+  <!-- Closed padlock: body -->
+  <rect x="560" y="37" width="16" height="11" rx="2.5" fill="#94a3b8"/>
+  <!-- Closed padlock: keyhole -->
+  <circle cx="568" cy="43" r="2" fill="#f8fafc"/>
+  <!-- Closed padlock: shackle (both legs in body — closed) -->
+  <path d="M 562,37 L 562,30 A 6,7 0 0 1 574,30 L 574,37" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Room 2 labels -->
+  <text x="499" y="63" text-anchor="middle" fill="#475569" font-size="9.5" font-weight="bold" letter-spacing="2">ROOM 2</text>
+  <line x1="433" y1="69" x2="565" y2="69" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="499" y="91" text-anchor="middle" fill="#475569" font-size="13">Network or</text>
+  <text x="499" y="109" text-anchor="middle" fill="#475569" font-size="13">Perish</text>
+  <!-- LOCKED pill -->
+  <rect x="470" y="117" width="58" height="11" rx="5.5" fill="#94a3b8"/>
+  <text x="499" y="126" text-anchor="middle" fill="white" font-size="8.5" font-weight="bold">LOCKED</text>
+  <!-- Validation pattern label -->
+  <text x="499" y="152" text-anchor="middle" fill="#94a3b8" font-size="10" font-style="italic">Event Subscriber</text>
+
+  <!-- Arrow 3 -->
+  <line x1="583" y1="79" x2="624" y2="79" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ========== ROOM 3 — LOCKED ========== -->
+  <rect x="628" y="28" width="165" height="103" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="7,4"/>
+  <!-- Closed padlock: body -->
+  <rect x="771" y="37" width="16" height="11" rx="2.5" fill="#94a3b8"/>
+  <!-- Closed padlock: keyhole -->
+  <circle cx="779" cy="43" r="2" fill="#f8fafc"/>
+  <!-- Closed padlock: shackle -->
+  <path d="M 773,37 L 773,30 A 6,7 0 0 1 785,30 L 785,37" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Room 3 labels -->
+  <text x="710" y="63" text-anchor="middle" fill="#475569" font-size="9.5" font-weight="bold" letter-spacing="2">ROOM 3</text>
+  <line x1="644" y1="69" x2="776" y2="69" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="710" y="91" text-anchor="middle" fill="#475569" font-size="13">Exit</text>
+  <text x="710" y="109" text-anchor="middle" fill="#475569" font-size="13">Interview</text>
+  <!-- LOCKED pill -->
+  <rect x="681" y="117" width="58" height="11" rx="5.5" fill="#94a3b8"/>
+  <text x="710" y="126" text-anchor="middle" fill="white" font-size="8.5" font-weight="bold">LOCKED</text>
+  <!-- Validation pattern label -->
+  <text x="710" y="152" text-anchor="middle" fill="#94a3b8" font-size="10" font-style="italic">Test Codeunit</text>
+
+</svg>

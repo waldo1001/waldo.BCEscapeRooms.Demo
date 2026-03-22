@@ -27,11 +27,11 @@ codeunit 74303 "EscapeDirections Venue" implements iEscapeRoomVenue
 
     procedure GetRoomCompletedImage() InStr: InStream
     begin
-        // No image — intentionally empty
+        NavApp.GetResource('RoomCompleted.png', InStr);
     end;
 
     procedure GetVenueCompletedImage() InStr: InStream
     begin
-        // No image — intentionally empty
+        NavApp.GetResource('VenueCompleted.png', InStr);
     end;
 }
