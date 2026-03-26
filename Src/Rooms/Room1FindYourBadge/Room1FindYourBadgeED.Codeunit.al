@@ -1,4 +1,4 @@
-codeunit 74304 "Room1 Find Your Badge ED" implements iEscapeRoom
+codeunit 74504 "Room1 Find Your Badge ED" implements iEscapeRoom
 {
     procedure GetRoomRec() EscapeRoom: Record "Escape Room"
     var

@@ -1,4 +1,4 @@
-enumextension 74302 "EscapeDirections Tasks" extends "Escape Room Task"
+enumextension 74502 "EscapeDirections Tasks" extends "Escape Room Task"
 {
     value(74300; CompleteRegistrationED)
     {

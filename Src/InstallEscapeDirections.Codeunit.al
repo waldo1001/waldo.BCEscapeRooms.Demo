@@ -1,4 +1,4 @@
-codeunit 74311 "Install EscapeDirections"
+codeunit 74511 "Install EscapeDirections"
 {
     Subtype = Install;
 

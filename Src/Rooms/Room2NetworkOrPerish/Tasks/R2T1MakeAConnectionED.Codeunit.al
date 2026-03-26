@@ -1,4 +1,4 @@
-codeunit 74308 "R2T1 Make A Connection ED" implements iEscapeRoomTask
+codeunit 74508 "R2T1 Make A Connection ED" implements iEscapeRoomTask
 {
     SingleInstance = true;
 

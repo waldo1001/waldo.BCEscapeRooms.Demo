@@ -1,4 +1,4 @@
-codeunit 74310 "Exit Interview Test ED"
+codeunit 74510 "Exit Interview Test ED"
 {
     Subtype = Test;
     TestPermissions = Disabled;

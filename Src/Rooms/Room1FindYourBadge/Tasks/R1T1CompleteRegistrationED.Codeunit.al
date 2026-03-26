@@ -1,4 +1,4 @@
-codeunit 74307 "R1T1 Complete Registration ED" implements iEscapeRoomTask
+codeunit 74507 "R1T1 Complete Registration ED" implements iEscapeRoomTask
 {
     var
         Room: Codeunit "Room1 Find Your Badge ED";

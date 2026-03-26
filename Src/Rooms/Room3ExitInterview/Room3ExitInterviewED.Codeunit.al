@@ -1,4 +1,4 @@
-codeunit 74306 "Room3 Exit Interview ED" implements iEscapeRoom
+codeunit 74506 "Room3 Exit Interview ED" implements iEscapeRoom
 {
     procedure GetRoomRec() EscapeRoom: Record "Escape Room"
     var

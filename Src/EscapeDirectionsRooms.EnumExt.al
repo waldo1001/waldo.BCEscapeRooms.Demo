@@ -1,4 +1,4 @@
-enumextension 74301 "EscapeDirections Rooms" extends "Escape Room"
+enumextension 74501 "EscapeDirections Rooms" extends "Escape Room"
 {
     value(74300; FindYourBadgeED)
     {

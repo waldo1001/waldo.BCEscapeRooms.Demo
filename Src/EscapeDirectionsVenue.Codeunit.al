@@ -1,4 +1,4 @@
-codeunit 74303 "EscapeDirections Venue" implements iEscapeRoomVenue
+codeunit 74503 "EscapeDirections Venue" implements iEscapeRoomVenue
 {
     procedure GetVenueRec() EscapeRoomVenue: Record "Escape Room Venue"
     var

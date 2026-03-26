@@ -1,4 +1,4 @@
-enumextension 74300 "EscapeDirections Venue" extends "Escape Room Venue"
+enumextension 74500 "EscapeDirections Venue" extends "Escape Room Venue"
 {
     value(74300; EscapeDirections)
     {

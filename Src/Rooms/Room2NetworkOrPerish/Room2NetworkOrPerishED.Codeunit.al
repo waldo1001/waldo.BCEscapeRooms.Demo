@@ -1,4 +1,4 @@
-codeunit 74305 "Room2 Network Or Perish ED" implements iEscapeRoom
+codeunit 74505 "Room2 Network Or Perish ED" implements iEscapeRoom
 {
     procedure GetRoomRec() EscapeRoom: Record "Escape Room"
     var
