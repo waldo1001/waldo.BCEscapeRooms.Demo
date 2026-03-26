@@ -24,6 +24,9 @@ codeunit 74508 "R2T1 Make A Connection ED" implements iEscapeRoomTask
 
     procedure IsValid(): Boolean
     begin
+        // You could create a failsafe here by checking if the task is already completed, 
+        // but for simplicity we will just return false to indicate that the task 
+        // can only be completed by creating the new connection.
         exit(false);
     end;
 
